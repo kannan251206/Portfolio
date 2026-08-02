@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import profileImg from "./WhatsApp Image 2026-08-02 at 4.08.06 PM.jpeg";
 import hireFlowBanner from "./Screenshot 2026-08-02 194227.png";
 import Dock from "./Dock";
+import MagicRings from "./MagicRings";
 import {
   Menu, X, Mail, Phone, ArrowRight, Download, Home, User,
   ExternalLink, Code2, Layout, Server, Database, Wrench,
@@ -232,6 +233,33 @@ function Navbar({ theme, onNavClick }) {
 function Hero({ theme }) {
   return (
     <section id="home" className="relative overflow-hidden max-w-6xl mx-auto px-5 sm:px-8 pt-8 pb-8 md:pt-12 md:pb-10">
+      {/* Magic Rings WebGL Canvas Animation */}
+      <div className="absolute inset-0 z-0 pointer-events-none opacity-45">
+        <MagicRings
+          color="#D4AF37"
+          colorTwo="#FFD700"
+          ringCount={7}
+          speed={0.9}
+          attenuation={10}
+          lineThickness={2}
+          baseRadius={0.3}
+          radiusStep={0.1}
+          scaleRate={0.1}
+          opacity={0.55}
+          blur={0}
+          noiseAmount={0.1}
+          rotation={0}
+          ringGap={1.6}
+          fadeIn={0.7}
+          fadeOut={0.5}
+          followMouse
+          mouseInfluence={0.2}
+          hoverScale={1.2}
+          parallax={0.05}
+          clickBurst={false}
+        />
+      </div>
+
       {/* Ambient Gold Orbs */}
       <Blob className="w-80 h-80 bg-[#D4AF37]/15 -top-12 -left-16" style={{ animationDelay: "0s" }} />
       <Blob className="w-72 h-72 bg-[#FFD700]/15 top-20 right-0" style={{ animationDelay: "1.5s" }} />
