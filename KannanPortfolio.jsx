@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import profileImg from "./WhatsApp Image 2026-08-02 at 4.08.06 PM.jpeg";
 import hireFlowBanner from "./Screenshot 2026-08-02 194227.png";
 import Dock from "./Dock";
