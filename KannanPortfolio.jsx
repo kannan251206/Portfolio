@@ -232,20 +232,20 @@ function Navbar({ theme, onNavClick }) {
 
 function Hero({ theme }) {
   return (
-    <section id="home" className="relative overflow-hidden max-w-6xl mx-auto px-5 sm:px-8 py-16 md:py-24 min-h-[80vh] flex items-center">
-      {/* Magic Rings WebGL Canvas Animation */}
-      <div className="absolute inset-0 z-0 pointer-events-none opacity-65 flex items-center justify-center">
+    <section id="home" className="relative overflow-hidden w-full py-12 md:py-20 min-h-[85vh] flex items-center justify-center">
+      {/* Magic Rings WebGL Canvas Animation - Full Edge-to-Edge Screen Coverage */}
+      <div className="absolute inset-0 z-0 pointer-events-none opacity-75 flex items-center justify-center w-full h-full">
         <MagicRings
           color="#D4AF37"
           colorTwo="#FFD700"
-          ringCount={8}
+          ringCount={9}
           speed={0.8}
-          attenuation={8}
+          attenuation={7}
           lineThickness={2.5}
-          baseRadius={0.55}
-          radiusStep={0.16}
-          scaleRate={0.18}
-          opacity={0.7}
+          baseRadius={0.65}
+          radiusStep={0.18}
+          scaleRate={0.2}
+          opacity={0.75}
           blur={0}
           noiseAmount={0.08}
           rotation={0}
@@ -261,11 +261,11 @@ function Hero({ theme }) {
       </div>
 
       {/* Ambient Gold Orbs */}
-      <Blob className="w-80 h-80 bg-[#D4AF37]/15 -top-12 -left-16" style={{ animationDelay: "0s" }} />
-      <Blob className="w-72 h-72 bg-[#FFD700]/15 top-20 right-0" style={{ animationDelay: "1.5s" }} />
-      <Blob className="w-64 h-64 bg-[#F59E0B]/12 bottom-0 left-1/3" style={{ animationDelay: "3s" }} />
+      <Blob className="w-96 h-96 bg-[#D4AF37]/20 -top-12 -left-16" style={{ animationDelay: "0s" }} />
+      <Blob className="w-80 h-80 bg-[#FFD700]/20 top-20 right-0" style={{ animationDelay: "1.5s" }} />
+      <Blob className="w-72 h-72 bg-[#F59E0B]/15 bottom-0 left-1/3" style={{ animationDelay: "3s" }} />
 
-      <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 max-w-6xl w-full mx-auto px-5 sm:px-8 grid md:grid-cols-2 gap-12 items-center">
         <div>
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border bg-[#D4AF37]/10 border-[#D4AF37]/25 text-[#FFD700] text-xs font-mono mb-5 shadow-sm">
             <span className="relative flex h-2 w-2">
