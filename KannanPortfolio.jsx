@@ -232,30 +232,30 @@ function Navbar({ theme, onNavClick }) {
 
 function Hero({ theme }) {
   return (
-    <section id="home" className="relative overflow-hidden max-w-6xl mx-auto px-5 sm:px-8 pt-8 pb-8 md:pt-12 md:pb-10">
+    <section id="home" className="relative overflow-hidden max-w-6xl mx-auto px-5 sm:px-8 py-16 md:py-24 min-h-[80vh] flex items-center">
       {/* Magic Rings WebGL Canvas Animation */}
-      <div className="absolute inset-0 z-0 pointer-events-none opacity-45">
+      <div className="absolute inset-0 z-0 pointer-events-none opacity-65 flex items-center justify-center">
         <MagicRings
           color="#D4AF37"
           colorTwo="#FFD700"
-          ringCount={7}
-          speed={0.9}
-          attenuation={10}
-          lineThickness={2}
-          baseRadius={0.3}
-          radiusStep={0.1}
-          scaleRate={0.1}
-          opacity={0.55}
+          ringCount={8}
+          speed={0.8}
+          attenuation={8}
+          lineThickness={2.5}
+          baseRadius={0.55}
+          radiusStep={0.16}
+          scaleRate={0.18}
+          opacity={0.7}
           blur={0}
-          noiseAmount={0.1}
+          noiseAmount={0.08}
           rotation={0}
           ringGap={1.6}
           fadeIn={0.7}
           fadeOut={0.5}
           followMouse
-          mouseInfluence={0.2}
-          hoverScale={1.2}
-          parallax={0.05}
+          mouseInfluence={0.25}
+          hoverScale={1.25}
+          parallax={0.06}
           clickBurst={false}
         />
       </div>
