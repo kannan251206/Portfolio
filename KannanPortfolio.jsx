@@ -3,6 +3,7 @@ import profileImg from "./WhatsApp Image 2026-08-02 at 4.08.06 PM.jpeg";
 import hireFlowBanner from "./Screenshot 2026-08-02 194227.png";
 import Dock from "./Dock";
 import MagicRings from "./MagicRings";
+import TextType from "./TextType";
 import {
   Menu, X, Mail, Phone, ArrowRight, Download, Home, User,
   ExternalLink, Code2, Layout, Server, Database, Wrench,
@@ -280,9 +281,16 @@ function Hero({ theme }) {
             style={{ fontFamily: "'Poppins', sans-serif" }}
           >
             Hi, I'm{" "}
-            <span className="bg-gradient-to-r from-[#D4AF37] via-[#FFD700] to-[#F59E0B] bg-clip-text text-transparent animate-shimmer">
-              Kannan AM
-            </span>
+            <TextType
+              as="span"
+              text={["Kannan AM", "Full Stack Dev", "Software Dev"]}
+              typingSpeed={90}
+              pauseDuration={2200}
+              deletingSpeed={45}
+              showCursor={true}
+              cursorCharacter="|"
+              className="bg-gradient-to-r from-[#D4AF37] via-[#FFD700] to-[#F59E0B] bg-clip-text text-transparent animate-shimmer"
+            />
           </h1>
 
           <div className="flex flex-wrap items-center gap-2 mb-6 text-sm font-medium">
