@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useMotionValue, useSpring, useTransform, AnimatePresence } from 'motion/react';
+import { motion, useMotionValue, useSpring, useTransform, AnimatePresence } from 'framer-motion';
 import { Children, cloneElement, useEffect, useMemo, useRef, useState } from 'react';
 
 import './Dock.css';
@@ -56,6 +56,7 @@ function DockLabel({ children, className = '', ...rest }) {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    if (!isHovered) return;
     const unsubscribe = isHovered.on('change', latest => {
       setIsVisible(latest === 1);
     });
@@ -89,13 +90,13 @@ export default function Dock({
   items,
   className = '',
   spring = { mass: 0.1, stiffness: 150, damping: 12 },
-  magnification = 70,
+  magnification = 54,
   distance = 200,
-  panelHeight = 68,
+  panelHeight = 52,
   dockHeight = 256,
-  baseItemSize = 50
+  baseItemSize = 38
 }) {
-  const mouseX = useMotionValue(Infinity);
+  const mouseX = useMotionValue(10000);
   const isHovered = useMotionValue(0);
 
   const maxHeight = useMemo(
@@ -114,7 +115,7 @@ export default function Dock({
         }}
         onMouseLeave={() => {
           isHovered.set(0);
-          mouseX.set(Infinity);
+          mouseX.set(10000);
         }}
         className={`dock-panel ${className}`}
         style={{ height: panelHeight }}
