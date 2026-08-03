@@ -66,6 +66,17 @@
   background-size: 28px 28px;
 }
 
+.bg-grid-pattern-light {
+  background-image: radial-gradient(rgba(201, 162, 39, 0.15) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.bg-rainbow-gradient-light {
+  background: linear-gradient(135deg, #C9A227, #E8D8A8, #8B6B1A, #C9A227);
+  background-size: 300% 300%;
+  animation: rainbowBorder 8s ease infinite;
+}
+
 /* ------------------------------------------------------------------ */
 /*  LUXURY OBSIDIAN & GOLD GLASS STYLING                              */
 /* ------------------------------------------------------------------ */

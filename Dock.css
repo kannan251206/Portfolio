@@ -16,14 +16,12 @@
   width: fit-content;
   gap: 0.4rem;
   border-radius: 1.1rem;
-  background-color: rgba(26, 26, 26, 0.85);
+  background-color: var(--dock-bg, rgba(26, 26, 26, 0.85));
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  border: var(--dock-border, 1px solid rgba(212, 175, 55, 0.3));
   padding: 0 0.45rem 0.35rem;
-  box-shadow: 
-    0 8px 28px rgba(0, 0, 0, 0.8),
-    inset 0 1px 1.5px rgba(255, 215, 0, 0.3);
+  box-shadow: var(--dock-shadow, 0 8px 28px rgba(0, 0, 0, 0.8), inset 0 1px 1.5px rgba(255, 215, 0, 0.3));
   z-index: 999;
 }
 
@@ -33,21 +31,21 @@
   align-items: center;
   justify-content: center;
   border-radius: 0.7rem;
-  background-color: #0D0D0D;
-  border: 1px solid rgba(212, 175, 55, 0.25);
-  color: #FFD700;
+  background-color: var(--dock-item-bg, #0D0D0D);
+  border: var(--dock-item-border, 1px solid rgba(212, 175, 55, 0.25));
+  color: var(--dock-item-color, #FFD700);
   box-shadow:
-    0 3px 5px -1px rgba(0, 0, 0, 0.3),
-    0 1px 3px -1px rgba(0, 0, 0, 0.2);
+    0 3px 5px -1px rgba(0, 0, 0, 0.15),
+    0 1px 3px -1px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   outline: none;
   transition: border-color 0.2s, color 0.2s, background-color 0.2s;
 }
 
 .dock-item:hover {
-  border-color: #FFD700;
-  color: #FFFFFF;
-  background-color: #1A1A1A;
+  border-color: var(--dock-item-hover-border, #FFD700);
+  color: var(--dock-item-hover-color, #FFFFFF);
+  background-color: var(--dock-item-hover-bg, #1A1A1A);
 }
 
 .dock-icon {
@@ -63,13 +61,13 @@
   width: fit-content;
   white-space: pre;
   border-radius: 0.4rem;
-  border: 1px solid rgba(212, 175, 55, 0.3);
-  background-color: #1A1A1A;
+  border: var(--dock-label-border, 1px solid rgba(212, 175, 55, 0.3));
+  background-color: var(--dock-label-bg, #1A1A1A);
   padding: 0.2rem 0.5rem;
   font-size: 0.7rem;
   font-weight: 600;
-  color: #FFD700;
+  color: var(--dock-label-color, #FFD700);
   transform: translateX(-50%);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   pointer-events: none;
 }

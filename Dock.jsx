@@ -89,6 +89,7 @@ function DockIcon({ children, className = '' }) {
 export default function Dock({
   items,
   className = '',
+  panelStyle = {},
   spring = { mass: 0.1, stiffness: 150, damping: 12 },
   magnification = 54,
   distance = 200,
@@ -118,7 +119,7 @@ export default function Dock({
           mouseX.set(10000);
         }}
         className={`dock-panel ${className}`}
-        style={{ height: panelHeight }}
+        style={{ height: panelHeight, ...panelStyle }}
         role="toolbar"
         aria-label="Application dock"
       >
